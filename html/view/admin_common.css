@@ -1,0 +1,87 @@
+
+/********************** 入力フォーム **************************/
+
+table {
+    margin-left: 50px;
+}
+
+th {
+    text-align: right;
+}
+
+.large_box {
+    width: 250px;
+}
+
+.normal_box {
+    width: 100px;
+}
+
+.small_box {
+    width: 50px;
+}
+
+.instr {                     /* 注意書き */
+    font-size: 12px;
+    color: #888888;
+}
+
+.add input[type="submit"] {
+    width: 200px;
+    display: block;
+    margin: 20px 150px;
+}
+
+/******************** メッセージ ***********************/
+
+
+.red {                       /* 入力必須の項目に赤いマークを表示する */
+    font-size: 14px;
+    font-weight: normal;
+    color: #ff5555;
+}
+
+.err_msg {                  
+    font-size: 12px;
+    color: #ff0000;
+}
+
+.comp_msg {
+    font-size: 12px;
+    color: #0000ff;   
+}
+
+/******************** 既存のデータの表示 ***********************/
+.display {
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+
+.display th {
+    background-color: #dddddd;
+}        
+
+.display th, .display td {
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #777777;
+    padding: 5px 10px;
+}
+
+.display th {
+    background-color: #dddddd;
+}        
+
+.img_box {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 0 auto;
+}
+
+
+
+.up_text {             /* '変更'*/ 
+    font-size: 12px;
+}

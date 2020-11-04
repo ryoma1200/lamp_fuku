@@ -1,0 +1,157 @@
+main {
+    width: 960px;
+    margin: 100px auto 0 auto;
+}
+
+
+h2 {
+    font-size: 28px;
+    color: #555555;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+h3 {
+    font-size: 20px;
+    color: #555555;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+h4 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #555555;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.err_msg {
+    font-size: 12px;
+    color: #dd2222;
+    text-align: center;
+    
+}
+
+
+.cart_box {
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin: 15px auto;
+}
+
+.cart_box span {
+    font-size: 15px;
+    font-weight: bold;
+    color: #336666;
+    margin: 0 3px;
+}
+
+table {
+    font-size: 14px;
+    color: #555555;
+    margin: 50px auto 5px auto;
+}
+
+
+td, th {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    font-size: 12px;
+    border-bottom: 1px solid #666666;
+    letter-spacing: 3px;
+}
+
+
+
+td img {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+
+
+.amount {
+    width: 45px;
+    font-size: 14px;
+    color: #666666;
+    background-color: #ffffff;
+    text-align: center;
+    border: 1px solid #777777;
+    border-radius: 2px;
+    padding: 3px;
+    margin: 3px;
+    display: inline;     
+}
+
+.amount:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+}
+
+
+.delete_btn, .update_btn {
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #777777;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+    padding: 4px 10px;
+    display: inline;    
+}
+
+.delete_btn:hover, .update_btn:hover {
+    cursor: pointer;
+    background-color: #666666;
+}
+
+
+.price_sum {
+    width: 300px;
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+    background-color: #eeeeee;
+    padding: 10px 20px;
+    margin: 20px auto;
+}
+
+
+
+
+
+
+
+/******************************** レジに進むボタン ***************************************/
+
+
+.checkout_btn {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #338888;
+    letter-spacing: 5px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+    padding: 10px 30px;
+    margin: 15px auto;
+    display: block;
+}
+
+.checkout_btn:hover {
+    cursor: pointer;
+    background-color: #336666;    
+}
+
+

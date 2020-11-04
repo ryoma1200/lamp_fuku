@@ -1,0 +1,159 @@
+/******************************* my page ****************************************/
+main {
+    width: 960px;
+    margin: 130px auto 0 auto;
+}
+
+
+h2 {
+    font-size: 24px;
+    color: #555555;
+    letter-spacing: 2px; 
+    text-align: center;
+}
+
+.user_page_box {
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 3px 3px 3px 3px rgba(0.1,0.1,0.1,0.1);
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.user_page_box tr {
+    padding: 10px 0;
+    display: block;
+}
+
+
+.user_page_msg {
+    font-size: 15px;
+    color: #6666ff;
+    text-align: center;
+    
+}
+
+
+.entry {
+    width: 180px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 2px; 
+    color: #777777;
+}
+
+.user_info {
+    width: 450px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td p {
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 1px; 
+    line-height: 20px;
+    color: #666666;
+}
+
+
+.small_box {
+    width: 75px;
+}
+
+.middle_box {
+    width: 150px;
+}
+
+.large_box {
+    width: 200px;
+}
+
+
+
+.edit_box {
+    text-align: center;
+}
+
+.edit_btn {
+    font-size: 10px;
+    color: #666666;
+    padding: 5px;
+    margin: 5px auto;
+    display: block;
+}
+
+
+/*************************************************************************/
+
+.hidden_box {
+    background-color: #eeeeee;
+    padding: 12px;
+    margin: 0 40px;
+}
+
+
+
+.small_text {
+    font-size: 12px;
+    text-align: left;
+    padding-borrom: 3px;
+    margin: 3px 3px 3px 25px;
+}
+
+.middle_box {
+    width: 160px;
+    height: 20px;
+    margin-left: 65px;
+}
+
+.large_box {
+    width: 200px;
+    height: 20px;
+    margin-left: 35px;
+}
+
+.user_page_box input[type="submit"] {
+    width: 55px;
+    height: 27px;
+    font-size: 12px;
+    color: #ffffff;
+    letter-spacing: 5px;
+    background-color: #777777;
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    margin: 0 0 5px 5px;
+}
+
+.user_phys td {
+    width: 130px;
+}
+
+.user_phys p {
+    text-align: right;
+}
+
+
+.select_text {
+    font-size: 14px;
+    color: #666666;
+    margin-right: 20px;
+}
+
+.phys_box {
+    font-size: 14px;
+    color: #777777;
+    text-align: right;
+    padding-right: 40px;
+}
+
+.select_box {
+    font-size: 14px;
+    color: #777777;
+    width: 100px;
+    height: 25px;
+}
+

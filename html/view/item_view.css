@@ -1,0 +1,124 @@
+
+
+/***************************  商品詳細  *********************************/
+
+.back_btn {
+    width: 70px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666666;
+    display: flex;
+    text-decoration: none;
+}
+
+.arrow {
+  width: 10px;
+  height: 10px;
+  border: 3px solid;
+  border-color:  transparent transparent #666666 #666666;
+  transform: rotate(45deg);
+}
+
+.back_btn:hover {
+    cursor: pointer;
+}
+
+
+
+main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+main h2 {
+    font-size: 30px;
+    color: #555555;
+    text-align: center;
+    padding: 5px;
+    margin: 45px 0 15px 0;
+}
+
+main p {
+    font-size: 14px;
+    color: #555555;
+    text-align: center;
+    margin: 5px;
+}
+
+section {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+.item_img {
+    margin: 40px 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+.item_img img {
+    max-width: 350px;
+    margin: 75px auto 0 auto;
+    display: block;
+}
+
+
+.item_info {
+    color: #555555;
+	line-height: 35px;
+    margin: 40px 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+.item_info h4 {
+    margin-top: 20px;
+}
+
+
+.comment {
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+
+
+.item_info form {
+    border-top: 1px solid #888888;
+    padding-top: 30px;
+    margin: 50px auto;
+}
+
+.item_info input[type="submit"] {
+    width: 160px;
+    color: #ffffff;
+    background-color: #338888;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 0 20px;    
+}
+
+.item_info input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #336666;
+}
+
+
+.item_info select {
+    width: 50px;
+    height: 30px;
+    color: #555555;
+    background-color: #ffffff;
+    border: 0.5px solid #777777;
+    border-radius: 7px;
+}
+
+.item_info select:hover {
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,137 @@
+/*******************************　ヘッダー　*******************************/
+.wrapper {
+    width: 100%;
+    font-weight: bold;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #ffffff;
+    opacity: 0.95;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.4);
+    padding-left: 10px;
+    display: flex;
+    z-index: 5;
+}
+
+.menu {
+    margin: 0 0 0 auto;
+}
+
+header h1 {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 26px;
+    letter-spacing: 5px;
+    margin: 15px;
+}
+
+.logo {
+    color: #555555;
+    text-decoration: none;
+}
+
+
+header ul {
+    height: auto;
+    margin-top: 5px 0 0 auto;
+}
+
+header li {
+    color: #555555;
+    text-align: center;
+    letter-spacing: 1px;
+    vertical-align: bottom;
+    padding: 7px 30px ;
+    list-style: none;
+    display: inline-block;
+    flex: 1;
+}
+
+header li:hover {
+    color: #ffffff;
+    background-color: #888888;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.top_msg {
+    text-align: right;
+    margin: 3px 10px;
+}
+
+.menu form {
+    display: inline-flex;
+}
+
+.menu span {
+    color: #555555;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.logout{
+    font-size: 7px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+    background-color: #338888;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+    text-decoration: none;
+    padding: 2px 10px;
+    display: inline-flex;
+}
+
+.logout:hover {
+    cursor: pointer;
+    background-color: #336666;  
+}
+
+
+/******************************* フッター ****************************************/
+
+footer {
+    background-color: #777777;
+    border-top: 1px solid #bbbbbb;
+    padding: 5px;
+    margin-top: 70px;
+}
+
+footer p {
+    color: #eeeeee;
+    font-size: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+footer ul {
+    width: 500px;
+    height: auto;
+    margin: 5px auto;
+    display: flex;
+}
+
+footer li {
+    font-size: 10px;
+    color: #eeeeee;
+    border-right: 1px solid #888888;
+    text-align: center;
+    vertical-align: bottom;
+    padding: 5px 10px;
+    list-style: none;
+    display: inline-block;
+    flex: 1;
+}
+
+footer li:last-child {
+    border-right: 0;
+}
+
+
+footer a {
+    color: #eeeeee;
+    text-decoration: none;
+    
+}

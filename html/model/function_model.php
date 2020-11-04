@@ -32,6 +32,22 @@ function pressed_logout_button() {
     return false;
 }
 
+// ログアウト処理
+function logout() {
+    session_start();                                       // セッションを開始する
+    $session_name = session_name();                        // 現在のセッション名を取得する
+    $_SESSION = array();                                   
+    
+    if (isset($_COOKIE[$session_name]) === true) {        
+        $params = session_get_cookie_params();
+        setcookie($session_name, '', time() - 42000, 
+        $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
+    }
+    session_destroy();
+    header('Location: ./index.php');
+    exit;
+}
+
 function set_cookie_user_id($user_id){ 
     session_start();
     delete_cookie('user_id');
@@ -115,7 +131,6 @@ function input_data_to_empty($data1, $data2) {
 
 /********************************** データベース操作 *************************************/
 
-
 // 本人のユーザ情報を取得する
 function db_read_my_userdata($dbh, $user_id) {
     try {
@@ -133,7 +148,6 @@ function db_read_my_userdata($dbh, $user_id) {
     }
 }
 
-
 // すべてのユーザ名を取得する
 function db_read_all_username($dbh) {
     try {
@@ -145,7 +159,6 @@ function db_read_all_username($dbh) {
         throw $e;
     }
 }
-
 
 // 全ての商品データを取得する
 function db_read_all_items($dbh) {
@@ -159,23 +172,7 @@ function db_read_all_items($dbh) {
     }
 } 
 
-/********************************** ここからみなおしいるとこ *************************************/
-
-// ログアウト処理
-function logout() {
-    session_start();                                       // セッションを開始する
-    $session_name = session_name();                        // 現在のセッション名を取得する
-    $_SESSION = array();                                   
-    
-    if (isset($_COOKIE[$session_name]) === true) {        
-        $params = session_get_cookie_params();
-        setcookie($session_name, '', time() - 42000, 
-        $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
-    }
-    session_destroy();
-    header('Location: ./index.php');
-    exit;
-}
+/***********************************************************************/
 
 function set_session($name, $value){
     $_SESSION[$name] = $value;
@@ -198,7 +195,6 @@ function get_csrf_token(){
 function get_random_string($length = 20){
     return substr(base_convert(hash('sha256', uniqid()), 16, 36), 0, $length);
 }
-
   
 function is_valid_csrf_token($token){
     if($token === '') {

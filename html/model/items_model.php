@@ -14,7 +14,6 @@ function get_filtered_items($dbh, $sql) {
     }
 } 
 
-
 // 全ての商品を取得する。
 function get_all_items($dbh) {
     try {
@@ -26,8 +25,6 @@ function get_all_items($dbh) {
         throw $e;
     }
 } 
-
-
 
 // 指定したidの商品データを取得する  item.phpで
 function get_item_by_item_id($dbh, $item_id) {
@@ -46,14 +43,7 @@ function get_item_by_item_id($dbh, $item_id) {
     }
 } 
 
-
-
-
-
-
-
 /**************** ここからさきこぴぺしただけ、要チェック ****************/
-
 
 // 買い物カゴに追加する
 function db_insert_item($dbh, $username, $item_id, $stock) {
@@ -117,24 +107,6 @@ function get_cart_by_username($dbh, $username) {
     }
 }
 
-
-
-// 指定した商品の在庫を取得する
-function db_read_item_stock($dbh, $item_id) {
-    try {
-        $sql = 'SELECT stock FROM fukuya_items WHERE id = ?';
-                
-        $stmt = $dbh->prepare($sql);
-        $stmt->bindValue(1, $item_id, PDO::PARAM_STR);
-        return fetch_query($dbh, $stmt);
-        
-    } catch (PDOException $e) {
-        throw $e;
-    }
-}
-
-
-
 // 指定した商品を削除する
 function db_delete_item($dbh, $username, $item_id) {
     try {
@@ -151,21 +123,7 @@ function db_delete_item($dbh, $username, $item_id) {
     }
 }
 
-
-
-// カートの商品個数が指定範囲内かどうかの確認
-/*
-function is_over_max_amount($amount) {
-    if (($amount + $duplicated_item_data['amount']) > 10) {         // 追加した商品 + カートの商品 が10こを超えてしまった場合           
-        $amount = 10 - $duplicated_item_data['amount'];             // 個数が最大値(10)になるように$amountを減算する。
-        $err_msg[] = 'カートに入れられるのは一つの商品につき１０点までです';
-    } 
-}
-*/
-
-
 //カート
-// 第一引数の配列から、特定のitem_id（第二引数）を持つ要素を取得する。
 function get_duplicated_item($cart_data, $item_id) { 
     foreach ($cart_data as $value) {
         if ($value['item_id'] === $item_id) {          // postされたitem_idがcartテーブル内に存在する場合の処理  
@@ -174,8 +132,6 @@ function get_duplicated_item($cart_data, $item_id) {
     }
     return '';
 }
-
-
 
 function calculate_total_amount($cart_data){
     $total_amount = 0;
@@ -188,7 +144,6 @@ function calculate_total_amount($cart_data){
         return 0;
     }
 }
-
 
 function calculate_total_price($cart_data){
     $total_price = 0; 
@@ -204,8 +159,6 @@ function calculate_total_price($cart_data){
 
 
 /***************** カート処理 *******************/
-
-
 
 // 指定した商品データを取得する
 function db_read_item($dbh, $item_id) {
@@ -225,7 +178,6 @@ function db_read_item($dbh, $item_id) {
     }
 } 
 
-
 // 指定した商品の在庫を変更する
 function decrement_stock($dbh, $item_id, $amount) {
     try {
@@ -243,8 +195,6 @@ function decrement_stock($dbh, $item_id, $amount) {
     }
 }
 
-
-
 // カートテーブルのデータを全て削除する
 function clear_cart($dbh, $username) {
     try {
@@ -258,7 +208,6 @@ function clear_cart($dbh, $username) {
     }
 }
 
-
 // 在庫が存在するかを確認する
 function exists_stock($dbh, $item_id, $amount){
     $cart_item_data = db_read_item($dbh, $item_id); 
@@ -267,12 +216,6 @@ function exists_stock($dbh, $item_id, $amount){
     }
     return false;
 }
-
-
-
-
-
-
 
 function get_extension($filename){
     return pathinfo($filename, PATHINFO_EXTENSION);    
@@ -314,7 +257,6 @@ function insert_item($dbh, $itemdata) {
     }
 }
 
-
 function update_itemdata($dbh, $item_id, $data) {
     try {
         $sql = 'UPDATE fukuya_items
@@ -340,7 +282,6 @@ function update_itemdata($dbh, $item_id, $data) {
     }
 }
 
-
 function delete_itemdata($dbh, $item_id) {
     try {
         $sql = 'DELETE FROM fukuya_items WHERE id = ?';
@@ -353,11 +294,3 @@ function delete_itemdata($dbh, $item_id) {
         throw $e;
     }
 }
-
-
-
-
-
-
-
-

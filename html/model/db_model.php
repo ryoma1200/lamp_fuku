@@ -13,7 +13,6 @@ function db_connect() {
     return $dbh;
 }
 
-
 //　クエリ実行
 function execute_query($db, $statement){
     try{
@@ -24,7 +23,6 @@ function execute_query($db, $statement){
         return false;
 }
   
-
 // クエリ実行＆配列の取得
 function fetch_query($db, $statement){
     try{
@@ -34,8 +32,7 @@ function fetch_query($db, $statement){
         set_error('データ取得に失敗しました。');
     }
         return false;
-  }
-  
+}
 
 // クエリ実行＆連想配列の取得
 function fetch_all_query($db, $statement){
@@ -47,12 +44,3 @@ function fetch_all_query($db, $statement){
     }
         return false;
 }
-
-  
-
-
-
-
-
-
-

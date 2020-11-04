@@ -21,7 +21,6 @@ function generate_query($search_condition, $userdata) {
     return $query; 
 }
 
-
 // 接頭語は WHERE か AND か決める
 function add_prefix_to_query($prior_query, $new_query) {
     if (empty($prior_query) === true) {
@@ -30,7 +29,6 @@ function add_prefix_to_query($prior_query, $new_query) {
         return ' AND'.$new_query;
     }
 }
-
 
 // カテゴリを絞り込むクエリ
 function generate_query_filter_category($query, $category) {
@@ -42,7 +40,6 @@ function generate_query_filter_category($query, $category) {
     return $new_query;
 }
 
-
 // サイズを絞り込むクエリ１
 function generate_query_filter_size($query, $size) {
     $new_query = '';
@@ -52,7 +49,6 @@ function generate_query_filter_size($query, $size) {
     }
     return $new_query;
 }
-
 
 // サイズを絞り込むクエリ２（ユーザの体型に合った商品を絞り込むクエリをつくる）
 function generate_query_filter_special_size($query, $userdata) { 
@@ -73,7 +69,6 @@ function generate_query_clothes_condition($height){
     $query .= generate_query_specified_clothes_size($height);       // 自分にあったサイズ
     return $query;
 }
-
 
 // 靴の絞り込み条件
 function generate_query_shoes_condition($shoe_size){
@@ -200,7 +195,6 @@ function generate_query_filter_price($query, $price_min, $price_max) {
     return add_prefix_to_query($query, $new_query);
 }
 
-
 // キーワードを絞り込むクエリ
 function generate_query_filter_keyword($query, $keyword) {
     $new_query = '';
@@ -210,7 +204,6 @@ function generate_query_filter_keyword($query, $keyword) {
     }
     return $new_query;
 }
-
 
 // 並び替えを決めるクエリ
 function generate_query_sort($order) {

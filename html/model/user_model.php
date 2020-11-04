@@ -28,7 +28,6 @@ function get_userdata($dbh, $user_id) {
     }
 }
 
-
 function get_all_userdata($dbh) {
     try {
         $sql = 'SELECT 
@@ -52,13 +51,6 @@ function get_all_userdata($dbh) {
     }
 }
 
-
-
-
-
-
-
-
 // DBのusernameに$usernameがあれば、ユーザ情報の配列を返す。
 function get_userdata_by_username($dbh, $username) {
     try {
@@ -73,7 +65,6 @@ function get_userdata_by_username($dbh, $username) {
     }
 }
 
-
 function get_user_id_by_username($dbh, $username){
     try {
         $sql = 'SELECT id FROM fukuya_info WHERE username = ? ';
@@ -87,7 +78,6 @@ function get_user_id_by_username($dbh, $username){
         return '';
     }
 }
-
 
 // ユーザ情報をデータベースに追加する
 function insert_new_userdata($dbh, $userdata) {
@@ -125,12 +115,6 @@ function insert_new_userdata($dbh, $userdata) {
     return $id;
 }
 
-
-
-
-
-
-
 // データベース　ユーザー情報の追加
 function update_userdata_info($dbh, $user_id, $userdata) {
     try {
@@ -150,14 +134,6 @@ function update_userdata_info($dbh, $user_id, $userdata) {
         throw $e;
     }
 }
-
-
-
-
-
-
-
-
 
 // データベース　ユーザー情報の削除
 function delete_userdata($dbh, $user_id) {
@@ -182,9 +158,6 @@ function delete_userdata($dbh, $user_id) {
         throw $e;
     }
 }
-
-
-
 
 // ユーザー名が固有のものかを確認する
 function is_unique_username($dbh, $username) {
@@ -243,8 +216,6 @@ function devide_birthdate($birthdate){
     }
 }
 
-
-
 /*************** user page ****************/
 
 // データベース　ユーザー情報の追加
@@ -264,7 +235,6 @@ function update_username($dbh, $user_id, $username) {
     }
 }
 
-
 // パスワードの変更
 function update_passwd($dbh, $user_id, $password) {
     try {
@@ -281,7 +251,6 @@ function update_passwd($dbh, $user_id, $password) {
         throw $e;
     }
 }
-
 
 // メールアドレスを変更
 function update_mail($dbh, $user_id, $mail) {
@@ -300,7 +269,6 @@ function update_mail($dbh, $user_id, $mail) {
     }
 }
 
-
 // 生年月日のサイズを変更
 function update_birthdate($dbh, $user_id, $birthdate) {
     try {
@@ -317,7 +285,6 @@ function update_birthdate($dbh, $user_id, $birthdate) {
         throw $e;
     }
 }
-
 
 // 身長を変更
 function update_height($dbh, $user_id, $height) {
@@ -336,7 +303,6 @@ function update_height($dbh, $user_id, $height) {
     }
 }
 
-
 // 靴のサイズを変更
 function update_shoe_size($dbh, $user_id, $shoe_size) {
     try {
@@ -353,8 +319,6 @@ function update_shoe_size($dbh, $user_id, $shoe_size) {
         throw $e;
     }  
 }
-
-
 
 function is_valid_height($height){
     if($height === HEIGHT__150 || $height === HEIGHT_151_155 || $height === HEIGHT_156_160 || 
